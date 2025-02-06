@@ -14,7 +14,8 @@
   }
 }
 
-html, body {
+html,
+body {
   color: #1f2937;
   background: var(--background);
   font-family: 'Roboto', Arial, sans-serif;

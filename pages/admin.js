@@ -85,11 +85,19 @@ export default function Admin() {
 
   if (!loggedIn) {
     return (
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col gap-2 bg-slate-200 border border-slate-600 rounded-md p-8 md:w-1/4 mt-20">
-          <input className="border border-slate-600 rounded-sm p-1 text-sm" type="text" placeholder="username" onChange={(e) => setUsername(e.target.value)} />
-          <input className="border border-slate-600 rounded-sm p-1 text-sm" type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
-          <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 max-w-fit bg-blue-400 hover:bg-blue-600" onClick={handleLogin}>Log in</button>
+      <div>
+        <Link href="/">
+          <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 hover:bg-blue-600 mt-4 ml-4 active:scale-95">Home</button>
+        </Link>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col gap-4 bg-slate-200 border border-slate-600 rounded-md p-8 md:w-1/4 mt-20">
+            <h1 className="font-semibold">Log in to access admin page</h1>
+            <div className="flex flex-col gap-2">
+              <input className="border border-slate-600 rounded-sm p-1 text-sm" type="text" placeholder="username" onChange={(e) => setUsername(e.target.value)} />
+              <input className="border border-slate-600 rounded-sm p-1 text-sm" type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 max-w-fit bg-blue-400 hover:bg-blue-600 active:scale-95" onClick={handleLogin}>Log in</button>
+          </div>
         </div>
       </div>
     );
@@ -100,9 +108,9 @@ export default function Admin() {
       <header className="bg-slate-200 h-48 min-w-screen flex justify-center items-center relative">
         <div className="absolute top-4 left-4 flex gap-4">
           <Link href="/">
-            <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 hover:bg-blue-600"> Home</button>
+            <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 hover:bg-blue-600 active:scale-95"> Home</button>
           </Link>
-          <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 hover:bg-blue-600" onClick={logout}>Log out</button>
+          <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 hover:bg-blue-600 active:scale-95" onClick={logout}>Log out</button>
         </div>
         <h1 className="text-2xl font-semibold text-center">Admin page</h1>
       </header>
@@ -131,7 +139,7 @@ export default function Admin() {
             onChange={(e) => setProjectUrl(e.target.value)}
           />
         </div>
-        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600" onClick={handleCreateProject}>Add project</button>
+        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600 active:scale-95" onClick={handleCreateProject}>Add project</button>
       </div>
       <hr />
       <div className="px-10 pb-10">
@@ -164,7 +172,7 @@ export default function Admin() {
                 onChange={(e) => updateProject(index, { url: e.target.value })}
               />
               <button
-                className="mt-2 px-2 py-1 text-sm max-w-fit border border-slate-800 rounded-md text-red-950 bg-red-400 hover:bg-red-600"
+                className="mt-2 px-2 py-1 text-sm max-w-fit border border-slate-800 rounded-md text-red-950 bg-red-400 hover:bg-red-600 active:scale-95"
                 onClick={() => deleteProject(index)}
               >Delete project
               </button>
@@ -181,7 +189,7 @@ export default function Admin() {
           <label className="text-sm font-semibold">Logo:</label>
           <input className="border border-slate-600 rounded-sm text-sm p-1" value={skillImage} onChange={(e) => setSkillImage(e.target.value)} />
         </div>
-        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600" onClick={handleCreateTechSkill}>Add skill</button>
+        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600 active:scale-95" onClick={handleCreateTechSkill}>Add skill</button>
       </div>
       <hr />
       <div className="px-10 pb-10 flex flex-col">
@@ -192,13 +200,15 @@ export default function Admin() {
               <img src={skill.image} alt={skill.name} className="h-16 w-16 object-contain" />
               <p className="font-semibold">{skill.name}</p>
               <button
-                className="mt-2 px-2 py-1 text-sm border border-slate-800 rounded-md text-red-950 bg-red-400 hover:bg-red-600"
+                className="mt-2 px-2 py-1 text-sm border border-slate-800 rounded-md text-red-950 bg-red-400 hover:bg-red-600 active:scale-95"
                 onClick={() => deleteTechSkill(index)}
               >Delete
               </button>
             </div>
           ))}
         </div>
+      </div>
+      <div className="bg-slate-200 w-full h-20">
       </div>
     </div>
   );
