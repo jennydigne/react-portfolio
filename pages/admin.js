@@ -13,6 +13,7 @@ export default function Admin() {
   const [projectDescription, setProjectDescription] = useState("");
   const [projectImage, setProjectImage] = useState("");
   const [projectUrl, setProjectUrl] = useState("");
+  const [techStack, setTechStack] = useState("");
 
   const [skillName, setSkillName] = useState("");
   const [skillImage, setSkillImage] = useState("");
@@ -37,6 +38,7 @@ export default function Admin() {
         description: projectDescription,
         image: projectImage,
         url: projectUrl,
+        stack: techStack
       };
 
       setProjects([...projects, newProject]);
@@ -44,6 +46,7 @@ export default function Admin() {
       setProjectDescription("");
       setProjectImage("");
       setProjectUrl("");
+      setTechStack("");
     }
   }
 
@@ -133,6 +136,11 @@ export default function Admin() {
             value={projectImage}
             onChange={(e) => setProjectImage(e.target.value)}
           />
+          <label className="text-sm font-semibold">Tech stack:</label>
+          <input className="border border-slate-600 rounded-sm text-sm p-1"
+            value={techStack}
+            onChange={(e) => setTechStack(e.target.value)}
+          />
           <label className="text-sm font-semibold">URL:</label>
           <input className="border border-slate-600 rounded-sm text-sm p-1"
             value={projectUrl}
@@ -163,7 +171,13 @@ export default function Admin() {
                 value={project.description}
                 onChange={(e) => updateProject(index, { description: e.target.value })}
               />
-
+              <label className="text-sm font-semibold">Tech stack:</label>
+              <input
+                className="border border-slate-600 rounded-sm text-xs p-1"
+                type="text"
+                value={project.stack}
+                onChange={(e) => updateProject(index, { stack: e.target.value })}
+              />
               <label className="text-sm font-semibold">URL:</label>
               <input
                 className="border border-slate-600 rounded-sm text-xs p-1"

@@ -33,14 +33,17 @@ export default function Home() {
         </div>
         <div className="mb-12 mt-20">
           <h2 className="text-xl font-semibold text-center mb-6">Some of my recent projects</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mx-8 md:mx-28">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 mx-8 md:mx-28">
             {projects.map((project, index) => (
-              <div key={index} className="shadow-[-1px_-2px_16px_-3px_#adadad] rounded-lg overflow-hidden">
+              <div key={index} className="shadow-[-1px_-2px_16px_-3px_#adadad] rounded-lg overflow-hidden flex flex-col h-full mb-4">
                 <img src={project.image} alt={project.name} className="h-32 object-cover w-full" />
-                <div className="p-3">
+                <div className="p-3 flex flex-col h-full justify-between">
                   <h3 className="font-semibold text-sm my-1">{project.name}</h3>
-                  <p className="text-xs mb-4">{project.description}</p>
-                  <a className="underline text-xs" href={project.url}>View on GitHub</a>
+                  <p className="text-sm mb-4">{project.description}</p>
+                  <div className="mt-auto">
+                    <p className="text-xs"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
+                    <a className="underline text-xs" href={project.url}>View on GitHub</a>
+                  </div>
                 </div>
               </div>
             ))}
