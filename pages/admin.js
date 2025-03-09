@@ -208,7 +208,7 @@ export default function Admin() {
       <hr />
       <div className="px-10 pb-10 flex flex-col">
         <h2 className="text-lg font-semibold mt-8 mb-4">My tech skills</h2>
-        <div className="flex gap-4 flex-wrap mb-8">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-6 mb-8">
           {techSkills.map((skill, index) => (
             <div key={index} className="border border-slate-600 rounded-md p-8 md:p-4 flex flex-col items-center">
               <img src={skill.image} alt={skill.name} className="h-16 w-16 object-contain" />
@@ -222,8 +222,8 @@ export default function Admin() {
           ))}
         </div>
       </div>
-      <div className="bg-slate-200 w-full h-20">
-      </div>
+      <footer className="bg-slate-200 w-full h-20">
+      </footer>
     </div>
   );
 }
