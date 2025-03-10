@@ -152,7 +152,7 @@ export default function Admin() {
       <hr />
       <div className="px-10 pb-10">
         <h2 className="text-lg font-semibold mt-8 mb-4">My projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {projects.map((project, index) => (
             <div className="flex flex-col gap-2 border border-slate-600 rounded-md p-4" key={index}>
               <h3 className="font-semibold">{project.name}</h3>

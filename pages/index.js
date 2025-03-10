@@ -33,14 +33,14 @@ export default function Home() {
         </div>
         <div className="mb-12 mt-20">
           <h2 className="text-xl font-semibold text-center mb-6">Some of my recent projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 mx-8 md:mx-28">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mx-8 lg:mx-12 auto-rows-fr">
             {projects.map((project, index) => (
-              <div key={index} className="shadow-[-1px_-2px_16px_-3px_#adadad] rounded-lg overflow-hidden flex flex-col h-full mb-4">
-                <img src={project.image} alt={project.name} className="h-32 object-cover w-full" />
-                <div className="p-3 flex flex-col h-full justify-between">
-                  <h3 className="font-semibold text-sm my-1">{project.name}</h3>
+              <div key={index} className="shadow-[-1px_-2px_16px_-3px_#adadad] h-full max-h-[400px] rounded-lg overflow-hidden flex flex-col mb-4">
+                <img src={project.image} alt={project.name} className="h-1/3 object-cover w-full" />
+                <div className="p-4 flex flex-col h-2/3 justify-between">
+                  <h3 className="font-semibold text-md mt-1 mb-2">{project.name}</h3>
                   <p className="text-sm mb-4">{project.description}</p>
-                  <div className="mt-auto">
+                  <div className="mt-auto mb-1">
                     <p className="text-xs"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
                     <a className="underline text-xs" href={project.url}>View on GitHub</a>
                   </div>
