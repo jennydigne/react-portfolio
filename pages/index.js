@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </header>
       <section className="min-h-screen">
-        <div className="flex flex-col gap-2 my-10 mx-5">
+        <div className="flex flex-col gap-2 my-10 mx-7">
           <h2 className="text-xl font-semibold text-center mb-3">Technologies I have worked with</h2>
           <ul className="flex flex-wrap gap-8 justify-center">
             {techSkills.map((skill, index) => (
