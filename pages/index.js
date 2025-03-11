@@ -1,6 +1,5 @@
 import { PortfolioContext } from "@/contexts/PortfolioContext";
 import { useContext } from "react";
-import Link from "next/link";
 import { FaLinkedinIn, FaGithub, FaRegEnvelope } from "react-icons/fa6";
 
 
@@ -11,9 +10,6 @@ export default function Home() {
   return (
     <div className="w-screen">
       <header className="bg-slate-200 w-full h-[70vh] md:h-[90vh] flex justify-center items-center relative">
-        {/* <Link href="/admin">
-          <button className="border border-black rounded-md px-2 py-1 text-sm text-blue-950 bg-blue-400 absolute top-4 left-4 hover:bg-blue-600 active:scale-95">Admin</button>
-        </Link> */}
         <div className="flex flex-col items-center text-center gap-8">
           <h1 className="font-bold text-4xl md:text-5xl">Jenny Digné</h1>
           <p className="text-xl w-4/5 md:w-1/2">Front-end developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
@@ -42,7 +38,10 @@ export default function Home() {
                   <p className="text-sm mb-4">{project.description}</p>
                   <div className="mt-auto mb-1">
                     <p className="text-xs"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
-                    <a className="underline text-xs" href={project.url}>View on GitHub</a>
+                    <div className="flex gap-2">
+                      <a className="underline text-xs" href={project.page} target="_blank">View project</a>
+                      <a className="underline text-xs" href={project.url} target="_blank">Project repo</a>
+                    </div>
                   </div>
                 </div>
               </div>

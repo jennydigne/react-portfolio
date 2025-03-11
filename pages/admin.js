@@ -14,6 +14,7 @@ export default function Admin() {
   const [projectImage, setProjectImage] = useState("");
   const [projectUrl, setProjectUrl] = useState("");
   const [techStack, setTechStack] = useState("");
+  const [projectPage, setProjectPage] = useState("");
 
   const [skillName, setSkillName] = useState("");
   const [skillImage, setSkillImage] = useState("");
@@ -32,14 +33,15 @@ export default function Admin() {
   };
 
   function handleCreateProject() {
-    if (projectName && projectDescription && projectImage && projectUrl) {
+    if (projectName && projectDescription && projectImage && projectUrl && projectPage) {
       const newProject = {
         name: projectName,
         description: projectDescription,
         image: projectImage,
         url: projectUrl,
-        stack: techStack
-      };
+        stack: techStack,
+        page: projectPage
+      }
 
       setProjects([...projects, newProject]);
       setProjectName("");
@@ -47,6 +49,7 @@ export default function Admin() {
       setProjectImage("");
       setProjectUrl("");
       setTechStack("");
+      setProjectPage("");
     }
   }
 
@@ -141,10 +144,15 @@ export default function Admin() {
             value={techStack}
             onChange={(e) => setTechStack(e.target.value)}
           />
-          <label className="text-sm font-semibold">URL:</label>
+          <label className="text-sm font-semibold">Github URL:</label>
           <input className="border border-slate-600 rounded-sm text-sm p-1"
             value={projectUrl}
             onChange={(e) => setProjectUrl(e.target.value)}
+          />
+          <label className="text-sm font-semibold">Project URL:</label>
+          <input className="border border-slate-600 rounded-sm text-sm p-1"
+            value={projectPage}
+            onChange={(e) => setProjectPage(e.target.value)}
           />
         </div>
         <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600 active:scale-95" onClick={handleCreateProject}>Add project</button>
@@ -178,12 +186,19 @@ export default function Admin() {
                 value={project.stack}
                 onChange={(e) => updateProject(index, { stack: e.target.value })}
               />
-              <label className="text-sm font-semibold">URL:</label>
+              <label className="text-sm font-semibold">Github URL:</label>
               <input
                 className="border border-slate-600 rounded-sm text-xs p-1"
                 type="text"
                 value={project.url}
                 onChange={(e) => updateProject(index, { url: e.target.value })}
+              />
+              <label className="text-sm font-semibold">Project URL:</label>
+              <input
+                className="border border-slate-600 rounded-sm text-xs p-1"
+                type="text"
+                value={project.page}
+                onChange={(e) => updateProject(index, { page: e.target.value })}
               />
               <button
                 className="mt-2 px-2 py-1 text-sm max-w-fit border border-slate-800 rounded-md text-red-950 bg-red-400 hover:bg-red-600 active:scale-95"
