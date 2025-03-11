@@ -37,7 +37,7 @@ export default function Home() {
                   <h3 className="font-semibold text-md mt-1 mb-2">{project.name}</h3>
                   <p className="text-sm mb-4">{project.description}</p>
                   <div className="mt-auto mb-1">
-                    <p className="text-xs"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
+                    <p className="text-xs mb-1"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
                     <div className="flex gap-2">
                       <a className="underline text-xs" href={project.page} target="_blank">View project</a>
                       <a className="underline text-xs" href={project.url} target="_blank">Project repo</a>

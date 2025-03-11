@@ -17,24 +17,25 @@ export default function PortfolioProvider({ children }) {
         image: "img2.jpg",
         url: "https://github.com/jennydigne/component-library",
         stack: "HTML, CSS, JS, React, Vite",
-        page: ""
-    },
-    {
-        name: "AI site",
-        description: "In this group project my team and I created an AI site using Google Gemini. My main focus was an application for finding movies in a specific genre.",
-        image: "img3.jpg",
-        url: "https://github.com/AlexanderF02/AI-gruppuppgift",
-        stack: "HTML, CSS, JS, React, Next.js",
-        page: ""
+        page: "https://component-library-peach.vercel.app/"
     },
     {
         name: "Todo app",
         description: "In this project I created a todo app in React, where users can add todo items, mark items as done and delete items.",
         image: "img7.jpg",
-        url: "https://github.com/jennydigne/component-library",
+        url: "https://github.com/jennydigne/react-todoapp",
         stack: "HTML, CSS, JS, React, Vite",
-        page: ""
-    }];
+        page: "https://react-todoapp-iota-seven.vercel.app/"
+    },
+        {
+            name: "Quiz site",
+            description: "In this group project my team and I created an interactive quiz site using Context API for global state management.",
+            image: "img3.jpg",
+            url: "https://github.com/jennydigne/quiz-group-task",
+            stack: "HTML, CSS, JS, React, Next.js",
+            page: "https://quiz-group-task-xi.vercel.app/quiz"
+        }
+    ];
 
     const baseSkills = [
         { name: "HTML", image: "html-logo.svg" },
