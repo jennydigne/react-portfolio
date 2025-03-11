@@ -3,8 +3,47 @@ import { useState, createContext, useEffect } from "react";
 export const PortfolioContext = createContext();
 
 export default function PortfolioProvider({ children }) {
-    const [projects, setProjects] = useState([]);
-    const [techSkills, setTechSkills] = useState([]);
+    const baseProjects = [{
+        name: "Radioplayer",
+        description: "In this project I created a working radio player by using Sveriges Radio's API to fetch information about the radio channels and playable audio stream urls.",
+        image: "img1.jpg",
+        url: "https://github.com/jennydigne/radioplayer",
+        stack: "HTML, CSS, JS"
+    },
+    {
+        name: "Component library",
+        description: "In this project I created a component library with reusable components, such as buttons and cards, in React.",
+        image: "img2.jpg",
+        url: "https://github.com/jennydigne/component-library",
+        stack: "HTML, CSS, JS, React, Vite"
+    },
+    {
+        name: "AI site",
+        description: "In this group project my team and I created an AI site using Google Gemini. My main focus was an application for finding movies in a specific genre.",
+        image: "img3.jpg",
+        url: "https://github.com/AlexanderF02/AI-gruppuppgift",
+        stack: "HTML, CSS, JS, React, Next.js"
+    },
+    {
+        name: "Todo app",
+        description: "In this project I created a todo app in React, where users can add todo items, mark items as done and delete items.",
+        image: "img7.jpg",
+        url: "https://github.com/jennydigne/component-library",
+        stack: "HTML, CSS, JS, React, Vite"
+    }];
+    const baseSkills = [
+        { name: "HTML", image: "html-logo.svg" },
+        { name: "CSS", image: "css-logo.svg" },
+        { name: "JavaScript", image: "js-logo.svg" },
+        { name: "Tailwind", image: "tailwind-logo.svg" },
+        { name: "VS Code", image: "vscode-logo.svg" },
+        { name: "GitHub", image: "github-logo.svg" },
+        { name: "Vite", image: "vite-logo.svg" },
+        { name: "Next.js", image: "next-logo.svg" },
+    ];
+    const [projects, setProjects] = useState(baseProjects);
+    const [techSkills, setTechSkills] = useState(baseSkills);
+
 
     useEffect(() => {
         const savedProjects = localStorage.getItem("projects");
