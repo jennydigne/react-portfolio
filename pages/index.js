@@ -2,7 +2,6 @@ import { PortfolioContext } from "@/contexts/PortfolioContext";
 import { useContext } from "react";
 import { FaLinkedinIn, FaGithub, FaRegEnvelope } from "react-icons/fa6";
 
-
 export default function Home() {
 
   const { projects, techSkills } = useContext(PortfolioContext);
@@ -17,18 +16,18 @@ export default function Home() {
       </header>
       <section className="min-h-screen">
         <div className="flex flex-col gap-2 my-10 mx-7">
-          <h2 className="text-xl font-semibold text-center mb-3">Technologies I have worked with</h2>
-          <ul className="flex flex-wrap gap-8 justify-center">
+          <h2 className="text-xl font-semibold text-center mb-6">Technologies I have worked with</h2>
+          <ul className="flex flex-wrap justify-center gap-6 md:gap-8 mx-8 lg:mx-12">
             {techSkills.map((skill, index) => (
-              <li key={index} className="flex flex-col items-center">
-                <img src={skill.image} alt={skill.name} className="h-14 w-14 object-contain mb-1" />
-                <span className="text-sm font-semibold">{skill.name}</span>
+              <li key={index} className="flex flex-col items-center w-20">
+                <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1" />
+                <span className="text-xs font-semibold">{skill.name}</span>
               </li>
             ))}
           </ul>
         </div>
         <div className="mb-12 mt-20">
-          <h2 className="text-xl font-semibold text-center mb-6">Some of my recent projects</h2>
+          <h2 className="text-xl font-semibold text-center mb-10">Some of my recent projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mx-8 lg:mx-12 auto-rows-fr">
             {(projects ?? []).map((project, index) => (
               <div key={index} className="shadow-[-1px_-2px_16px_-3px_#adadad] h-full max-h-[400px] rounded-lg overflow-hidden flex flex-col mb-4">
@@ -52,7 +51,7 @@ export default function Home() {
       <footer className="bg-slate-200 w-full h-20 flex relative bottom-0 items-center justify-around">
         <p className="flex items-center gap-1"><FaRegEnvelope size={20} /><a className="underline" href="mailto:jenny_digne@hotmail.com">E-mail</a></p>
         <p className="flex items-center gap-1"><FaGithub size={20} /><a className="underline" href="https://github.com/jennydigne">Github</a></p>
-        <p className="flex items-center gap-1"><FaLinkedinIn size={20} /><a className="underline" href="https://www.linkedin.com/in/jenny-digne/">Linkedin</a></p>
+        <p className="flex items-center gap-1"><FaLinkedinIn size={20} /><a className="underline" href="https://www.linkedin.com/in/jenny-digne/">LinkedIn</a></p>
       </footer>
     </div>
   );

@@ -27,14 +27,14 @@ export default function PortfolioProvider({ children }) {
         stack: "HTML, CSS, JS, React, Vite",
         page: "https://react-todoapp-iota-seven.vercel.app/"
     },
-        {
-            name: "Quiz site",
-            description: "In this group project my team and I created an interactive quiz site using Context API for global state management.",
-            image: "img3.jpg",
-            url: "https://github.com/jennydigne/quiz-group-task",
-            stack: "HTML, CSS, JS, React, Next.js",
-            page: "https://quiz-group-task-xi.vercel.app/quiz"
-        }
+    {
+        name: "Quiz site",
+        description: "In this group project my team and I created an interactive quiz site using Context API for global state management.",
+        image: "img3.jpg",
+        url: "https://github.com/jennydigne/quiz-group-task",
+        stack: "HTML, CSS, JS, React, Next.js",
+        page: "https://quiz-group-task-xi.vercel.app/quiz"
+    }
     ];
 
     const baseSkills = [
@@ -44,11 +44,12 @@ export default function PortfolioProvider({ children }) {
         { name: "Tailwind", image: "tailwind-logo.svg" },
         { name: "VS Code", image: "vscode-logo.svg" },
         { name: "GitHub", image: "github-logo.svg" },
+        { name: "GitLab", image: "gitlab-logo.svg" },
         { name: "Vite", image: "vite-logo.svg" },
         { name: "Next", image: "next-logo.svg" },
-        {name: "React", image: "react-logo.svg"},
-        {name: "React Native", image: "react-logo.svg"},
-        {name: "Firebase", image: "firebase-logo.svg"}
+        { name: "React", image: "react-logo.svg" },
+        { name: "React Native", image: "react-logo.svg" },
+        { name: "Firebase", image: "firebase-logo.svg" }
     ];
     const [projects, setProjects] = useState(baseProjects);
     const [techSkills, setTechSkills] = useState(baseSkills);
@@ -59,10 +60,21 @@ export default function PortfolioProvider({ children }) {
         const savedSkills = localStorage.getItem("techSkills");
 
         if (savedProjects) {
-            setProjects(JSON.parse(savedProjects));
+            const parsed = JSON.parse(savedProjects);
+            if (parsed.length >= baseProjects.length) {
+                setProjects(parsed);
+            } else {
+                setProjects(baseProjects);
+            }
         }
+
         if (savedSkills) {
-            setTechSkills(JSON.parse(savedSkills));
+            const parsed = JSON.parse(savedSkills);
+            if (parsed.length >= baseSkills.length) {
+                setTechSkills(parsed);
+            } else {
+                setTechSkills(baseSkills);
+            }
         }
 
     }, []);
