@@ -45,7 +45,10 @@ export default function PortfolioProvider({ children }) {
         { name: "VS Code", image: "vscode-logo.svg" },
         { name: "GitHub", image: "github-logo.svg" },
         { name: "Vite", image: "vite-logo.svg" },
-        { name: "Next.js", image: "next-logo.svg" },
+        { name: "Next", image: "next-logo.svg" },
+        {name: "React", image: "react-logo.svg"},
+        {name: "React Native", image: "react-logo.svg"},
+        {name: "Firebase", image: "firebase-logo.svg"}
     ];
     const [projects, setProjects] = useState(baseProjects);
     const [techSkills, setTechSkills] = useState(baseSkills);
