@@ -11,7 +11,6 @@ export default function Admin() {
 
   const [projectName, setProjectName] = useState("");
   const [projectDescription, setProjectDescription] = useState("");
-  const [projectImage, setProjectImage] = useState("");
   const [projectUrl, setProjectUrl] = useState("");
   const [techStack, setTechStack] = useState("");
   const [projectPage, setProjectPage] = useState("");
@@ -41,11 +40,10 @@ export default function Admin() {
   };
 
   function handleCreateProject() {
-    if (projectName && projectDescription && projectImage && projectUrl && projectPage) {
+    if (projectName && projectDescription && projectUrl && projectPage) {
       const newProject = {
         name: projectName,
         description: projectDescription,
-        image: projectImage,
         url: projectUrl,
         stack: techStack,
         page: projectPage
@@ -54,7 +52,6 @@ export default function Admin() {
       setProjects([...projects, newProject]);
       setProjectName("");
       setProjectDescription("");
-      setProjectImage("");
       setProjectUrl("");
       setTechStack("");
       setProjectPage("");
@@ -142,11 +139,6 @@ export default function Admin() {
             value={projectDescription}
             onChange={(e) => setProjectDescription(e.target.value)}
           />
-          <label className="text-sm font-semibold">Image:</label>
-          <input className="border border-slate-600 rounded-sm text-sm p-1"
-            value={projectImage}
-            onChange={(e) => setProjectImage(e.target.value)}
-          />
           <label className="text-sm font-semibold">Tech stack:</label>
           <input className="border border-slate-600 rounded-sm text-sm p-1"
             value={techStack}
@@ -163,14 +155,15 @@ export default function Admin() {
             onChange={(e) => setProjectPage(e.target.value)}
           />
         </div>
-        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600 active:scale-95" onClick={handleCreateProject}>Add project</button>
+        <button className="border border-slate-800 rounded-md px-2 py-1 text-sm text-green-950 bg-green-400 hover:bg-green-600 active:scale-95"
+          onClick={handleCreateProject}>Add project</button>
       </div>
       <hr />
       <div className="px-10 pb-10">
         <h2 className="text-lg font-semibold mt-8 mb-4">My projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {projects.map((project, index) => (
-            <div className="flex flex-col gap-2 border border-slate-600 rounded-md p-4" key={index}>
+            <div className="flex flex-col gap-2 border border-slate-400 rounded-md p-4" key={index}>
               <h3 className="font-semibold">{project.name}</h3>
               <label className="text-sm font-semibold">Title:</label>
               <input
@@ -179,7 +172,6 @@ export default function Admin() {
                 value={project.name}
                 onChange={(e) => updateProject(index, { name: e.target.value })}
               />
-              <img src={project.image} alt={project.name} className="h-32 object-cover w-full" />
               <label className="text-sm font-semibold">Description:</label>
               <textarea
                 className="border border-slate-600 rounded-sm text-sm p-1"
@@ -233,7 +225,7 @@ export default function Admin() {
         <h2 className="text-lg font-semibold mt-8 mb-4">My tech skills</h2>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-6 mb-8">
           {techSkills.map((skill, index) => (
-            <div key={index} className="border border-slate-600 rounded-md p-8 md:p-4 flex flex-col items-center">
+            <div key={index} className="border border-slate-400 rounded-md p-8 md:p-4 flex flex-col items-center">
               <img src={skill.image} alt={skill.name} className="h-16 w-16 object-contain" />
               <p className="font-semibold">{skill.name}</p>
               <button

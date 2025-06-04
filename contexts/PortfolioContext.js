@@ -6,34 +6,36 @@ export default function PortfolioProvider({ children }) {
     const baseProjects = [{
         name: "Radioplayer",
         description: "In this project I created a working radio player by using Sveriges Radio's API to fetch information about the radio channels and playable audio stream urls.",
-        image: "img1.jpg",
         url: "https://github.com/jennydigne/radioplayer",
         stack: "HTML, CSS, JS",
         page: "https://radioplayer-chi.vercel.app/"
     },
     {
-        name: "Component library",
+        name: "Component Library",
         description: "In this project I created a component library with reusable components, such as buttons and cards, in React.",
-        image: "img2.jpg",
         url: "https://github.com/jennydigne/component-library",
         stack: "HTML, CSS, JS, React, Vite",
         page: "https://component-library-peach.vercel.app/"
     },
     {
-        name: "Todo app",
+        name: "Todo App",
         description: "In this project I created a todo app in React, where users can add todo items, mark items as done and delete items.",
-        image: "img7.jpg",
         url: "https://github.com/jennydigne/react-todoapp",
         stack: "HTML, CSS, JS, React, Vite",
         page: "https://react-todoapp-iota-seven.vercel.app/"
     },
     {
-        name: "Quiz site",
+        name: "Quiz Site",
         description: "In this group project my team and I created an interactive quiz site using Context API for global state management.",
-        image: "img3.jpg",
         url: "https://github.com/jennydigne/quiz-group-task",
         stack: "HTML, CSS, JS, React, Next.js",
         page: "https://quiz-group-task-xi.vercel.app/quiz"
+    },
+    {
+        name: "React Native Todo App",
+        description: "In this project I created a todo app in React Native and Expo, where users can add todo items, mark items as done and delete items.",
+        url: "https://github.com/jennydigne/quiz-group-task",
+        stack: "JS, React Native, Expo",
     }
     ];
 
