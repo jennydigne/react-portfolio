@@ -19,9 +19,17 @@ export default function Admin() {
   const [skillName, setSkillName] = useState("");
   const [skillImage, setSkillImage] = useState("");
 
-  function handleLogin() {
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
-    if (username === "admin" && password === adminPassword) {
+  async function handleLogin() {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
       setLoggedIn(true);
     } else {
       alert("Invalid login");
