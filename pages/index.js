@@ -19,7 +19,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-center mb-6">Some of the technologies I have used</h2>
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 mx-8 lg:mx-12">
             {techSkills.map((skill, index) => (
-              <li key={index} className="flex flex-col items-center w-20 rounded-md py-1 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <li key={index} className="flex flex-col items-center w-20 rounded-md py-1 bg-white shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 transition-shadow">
                 <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1" />
                 <span className="text-xs font-semibold">{skill.name}</span>
               </li>
@@ -30,7 +30,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-center mb-10">Some of my recent projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mx-8 lg:mx-12 auto-rows-fr">
             {(projects ?? []).map((project, index) => (
-              <div key={index} className="shadow-sm hover:shadow-md transition-shadow h-full max-h-[400px] rounded-lg overflow-hidden flex flex-col mb-4 bg-white">
+              <div key={index} className="shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 transition-shadow h-full max-h-[400px] rounded-lg overflow-hidden flex flex-col mb-4 bg-white">
                 <div className="p-4 flex flex-col h-2/3 justify-between">
                   <h3 className="font-semibold text-md mt-1 mb-2">{project.name}</h3>
                   <p className="text-sm mb-4">{project.description}</p>
