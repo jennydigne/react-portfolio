@@ -11,12 +11,12 @@ export default function Home() {
       <header className="bg-gradient-to-br from-green-300 via-blue-200 to-green-200 w-full h-[70vh] md:h-[90vh] flex justify-center items-center relative">
         <div className="flex flex-col items-center text-center gap-8">
           <h1 className="font-bold text-4xl md:text-5xl">Jenny Digné</h1>
-          <p className="text-xl w-4/5 md:w-1/2">Frontendstudent från Stockholm som gillar att förverkliga idéer genom kod och skapa bra användarupplevelser</p>
+          <p className="text-xl w-4/5 md:w-1/2">Frontend developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
         </div>
       </header>
       <section className="flex-grow bg-slate-50">
         <div className="flex flex-col gap-2 my-10 mx-7">
-          <h2 className="text-xl font-semibold text-center mb-6">Verktyg och ramverk jag har använt</h2>
+          <h2 className="text-xl font-semibold text-center mb-6">Some of the technologies I have used</h2>
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 mx-8 lg:mx-12">
             {techSkills.map((skill, index) => (
               <li key={index} className="flex flex-col items-center w-20 rounded-md py-1 bg-white shadow-sm hover:shadow-md transition-shadow">
@@ -27,7 +27,7 @@ export default function Home() {
           </ul>
         </div>
         <div className="mb-12 mt-20">
-          <h2 className="text-xl font-semibold text-center mb-10">Några av mina senaste projekt</h2>
+          <h2 className="text-xl font-semibold text-center mb-10">Some of my recent projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mx-8 lg:mx-12 auto-rows-fr">
             {(projects ?? []).map((project, index) => (
               <div key={index} className="shadow-sm hover:shadow-md transition-shadow h-full max-h-[400px] rounded-lg overflow-hidden flex flex-col mb-4 bg-white">
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="bg-gradient-to-b from-slate-200 to-white w-full py-8 text-sm text-slate-700">
-        <h2 className="text-center font-semibold text-base mb-4">Kontakta mig</h2>
+        <h2 className="text-center font-semibold text-base mb-4">Contact me</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="flex items-center gap-2">
             <FaRegEnvelope size={18} />
