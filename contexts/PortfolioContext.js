@@ -36,6 +36,13 @@ export default function PortfolioProvider({ children }) {
         description: "In this project I created a todo app in React Native and Expo, where users can add todo items, mark items as done and delete items.",
         url: "https://github.com/jennydigne/quiz-group-task",
         stack: "JS, React Native, Expo",
+    },
+    {
+        name: "Weather App",
+        description: "In this project I created a weather app using React and Next.js, where users can get the local weather or search for a specific city or area.",
+        url: "https://github.com/jennydigne/weather-app",
+        stack: "JavaScript, CSS, React, Next.js",
+        page: "https://weather-app-five-tau-92.vercel.app/"
     }
     ];
 
