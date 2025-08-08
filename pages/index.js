@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </header>
       <section className="flex-grow bg-slate-50">
-        <div className="flex flex-col gap-2 my-10 mx-7">
+        <div className="flex flex-col gap-2 my-10">
           <h2 className="text-xl font-semibold text-center mb-6">Some technologies I have used</h2>
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 mx-8 lg:mx-12">
             {techSkills.map((skill, index) => (
