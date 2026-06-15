@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="w-screen flex flex-col min-h-screen">
-      <header className="bg-gradient-to-br from-green-300 via-blue-200 to-green-200 w-full h-[50vh] flex justify-center items-center relative">
+      <header className="bg-gradient-to-br from-indigo-950/40 via-slate-900 to-emerald-950/30 text-slate-100 w-full h-[50vh] flex justify-center items-center relative">
         <div className="flex flex-col items-center text-center gap-8">
           <h1 className="font-bold text-4xl md:text-5xl">Jenny Digné</h1>
           <p className="text-xl w-4/5 md:w-1/2">Frontend developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
