@@ -8,13 +8,13 @@ export default function Home() {
 
   return (
     <div className="w-screen flex flex-col min-h-screen">
-      <header className="bg-gradient-to-br from-indigo-950/40 via-slate-900 to-emerald-950/30 text-slate-100 w-full h-[50vh] flex justify-center items-center relative">
+      <header className="bg-gradient-to-br from-slate-600 via-slate-800 to-slate-500 text-slate-100 w-full h-[50vh] flex justify-center items-center relative">
         <div className="flex flex-col items-center text-center gap-8">
           <h1 className="font-bold text-4xl md:text-5xl">Jenny Digné</h1>
           <p className="text-xl w-4/5 md:w-1/2">Frontend developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
         </div>
       </header>
-      <section className="grid grid-cols-1 xl:grid-cols-3 gap-4 bg-slate-50 lg:p-5">
+      <section className="grid grid-cols-1 xl:grid-cols-3 gap-4 bg-slate-200 lg:p-5">
         <div className="p-5 md:p-10 lg:col-span-2">
           <h2 className="text-xl font-semibold mb-8 text-center md:text-left">Some of my projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 auto-rows-fr">
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
       </section>
-      <footer className="bg-gradient-to-b from-slate-200 to-white w-full py-8 text-sm text-slate-700">
+      <footer className="bg-slate-800 w-full py-8 text-sm text-slate-100">
         <h2 className="text-center font-semibold text-base mb-4">Contact me</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="flex items-center gap-2">
