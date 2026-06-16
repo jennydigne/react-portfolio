@@ -39,8 +39,8 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-8 text-center md:text-left">Some technologies I've used</h2>
           <ul className="flex justify-center md:justify-start flex-wrap gap-6">
             {techSkills.map((skill, index) => (
-              <li key={index} className="flex flex-col items-center w-20 rounded-md py-1 bg-white shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 transition-shadow">
-                <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1" />
+              <li key={index} className="flex flex-col items-center w-20 py-1">
+                <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1 opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-xs font-semibold">{skill.name}</span>
               </li>
             ))}
