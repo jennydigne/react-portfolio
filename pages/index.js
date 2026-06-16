@@ -14,7 +14,7 @@ export default function Home() {
           <p className="text-xl w-4/5 md:w-1/2 text-slate-300">Frontend developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
         </div>
       </header>
-      <section className="grid grid-cols-1 xl:grid-cols-3 gap-4 bg-slate-200 lg:p-5">
+      <section className="grid grid-cols-1 xl:grid-cols-3 bg-slate-200 py-4 lg:px-4">
         <div className="p-5 md:p-10 lg:col-span-2">
           <h2 className="text-xl font-semibold mb-8 text-center md:text-left">Some of my projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 auto-rows-fr">
@@ -35,7 +35,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col p-10">
+        <div className="flex flex-col p-5 md:p-10">
           <h2 className="text-xl font-semibold mb-8 text-center md:text-left">Some technologies I've used</h2>
           <ul className="flex justify-center md:justify-start flex-wrap gap-6">
             {techSkills.map((skill, index) => (
@@ -64,6 +64,7 @@ export default function Home() {
             <a className="hover:underline" href="https://www.linkedin.com/in/jenny-digne/">linkedin.com/in/jenny-digne</a>
           </div>
         </div>
+        <p className="mt-8 text-xs text-center text-slate-300">© Built with React, Next.js & Tailwind CSS by Jenny Digné</p>
       </footer>
     </div>
   );
