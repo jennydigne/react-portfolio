@@ -58,7 +58,8 @@ export default function PortfolioProvider({ children }) {
         { name: "Next", image: "next-logo.svg" },
         { name: "React", image: "react-logo.svg" },
         { name: "React Native", image: "react-logo.svg" },
-        { name: "Firebase", image: "firebase-logo.svg" }
+        { name: "Firebase", image: "firebase-logo.svg" },
+        { name: "TypeScript", image: "typescript-logo.svg" }
     ];
 
     return (
