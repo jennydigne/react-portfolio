@@ -1,9 +1,9 @@
-import { useState, createContext, useEffect } from "react";
+import { createContext } from "react";
 
 export const PortfolioContext = createContext();
 
 export default function PortfolioProvider({ children }) {
-    const baseProjects = [{
+    const projects = [{
         name: "Radioplayer",
         description: "In this project I created a working radio player by using Sveriges Radio's API to fetch information about the radio channels and playable audio stream urls.",
         url: "https://github.com/jennydigne/radioplayer",
@@ -46,7 +46,7 @@ export default function PortfolioProvider({ children }) {
     }
     ];
 
-    const baseSkills = [
+    const techSkills = [
         { name: "HTML", image: "html-logo.svg" },
         { name: "CSS", image: "css-logo.svg" },
         { name: "JavaScript", image: "js-logo.svg" },
@@ -60,41 +60,9 @@ export default function PortfolioProvider({ children }) {
         { name: "React Native", image: "react-logo.svg" },
         { name: "Firebase", image: "firebase-logo.svg" }
     ];
-    const [projects, setProjects] = useState(baseProjects);
-    const [techSkills, setTechSkills] = useState(baseSkills);
-
-
-    useEffect(() => {
-        const savedProjects = localStorage.getItem("projects");
-        const savedSkills = localStorage.getItem("techSkills");
-
-        if (savedProjects) {
-            const parsed = JSON.parse(savedProjects);
-            if (parsed.length >= baseProjects.length) {
-                setProjects(parsed);
-            } else {
-                setProjects(baseProjects);
-            }
-        }
-
-        if (savedSkills) {
-            const parsed = JSON.parse(savedSkills);
-            if (parsed.length >= baseSkills.length) {
-                setTechSkills(parsed);
-            } else {
-                setTechSkills(baseSkills);
-            }
-        }
-
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem("projects", JSON.stringify(projects));
-        localStorage.setItem("techSkills", JSON.stringify(techSkills));
-    }, [projects, techSkills]);
 
     return (
-        <PortfolioContext.Provider value={{ projects, setProjects, techSkills, setTechSkills }}>
+        <PortfolioContext.Provider value={{ projects, techSkills }}>
             {children}
         </PortfolioContext.Provider>
     )
