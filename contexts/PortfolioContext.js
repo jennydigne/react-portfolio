@@ -6,43 +6,43 @@ export default function PortfolioProvider({ children }) {
     const projects = [{
         name: "Radioplayer",
         description: "In this project I created a working radio player by using Sveriges Radio's API to fetch information about the radio channels and playable audio stream urls.",
-        url: "https://github.com/jennydigne/radioplayer",
         stack: "HTML, CSS, JS",
-        page: "https://radioplayer-chi.vercel.app/"
+        github: "https://github.com/jennydigne/radioplayer",
+        demo: "https://radioplayer-chi.vercel.app/"
     },
     {
         name: "Component Library",
         description: "In this project I created a component library with reusable components, such as buttons and cards, in React.",
-        url: "https://github.com/jennydigne/component-library",
         stack: "HTML, CSS, JS, React, Vite",
-        page: "https://component-library-peach.vercel.app/"
+        github: "https://github.com/jennydigne/component-library",
+        demo: "https://component-library-peach.vercel.app/"
     },
     {
         name: "Todo App",
         description: "In this project I created a todo app in React, where users can add todo items, mark items as done and delete items.",
-        url: "https://github.com/jennydigne/react-todoapp",
         stack: "HTML, CSS, JS, React, Vite",
-        page: "https://react-todoapp-iota-seven.vercel.app/"
+        github: "https://github.com/jennydigne/react-todoapp",
+        demo: "https://react-todoapp-iota-seven.vercel.app/"
     },
     {
         name: "Quiz Site",
         description: "In this group project my team and I created an interactive quiz site using Context API for global state management.",
-        url: "https://github.com/jennydigne/quiz-group-task",
         stack: "HTML, CSS, JS, React, Next.js",
-        page: "https://quiz-group-task-xi.vercel.app/quiz"
+        github: "https://github.com/jennydigne/quiz-group-task",
+        demo: "https://quiz-group-task-xi.vercel.app/quiz"
     },
     {
         name: "React Native Todo App",
         description: "In this project I created a todo app in React Native and Expo, where users can add todo items, mark items as done and delete items.",
-        url: "https://github.com/jennydigne/quiz-group-task",
         stack: "JS, React Native, Expo",
+        github: "https://github.com/jennydigne/react-native-todoapp",
     },
     {
         name: "Weather App",
         description: "In this project I created a weather app using React and Next.js, where users can get the local weather or search for a specific city or area.",
-        url: "https://github.com/jennydigne/weather-app",
         stack: "JavaScript, CSS, React, Next.js",
-        page: "https://weather-app-five-tau-92.vercel.app/"
+        github: "https://github.com/jennydigne/weather-app",
+        demo: "https://weather-app-five-tau-92.vercel.app/"
     }
     ];
 

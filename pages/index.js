@@ -26,8 +26,8 @@ export default function Home() {
                   <div className="mt-auto mb-1">
                     <p className="text-xs mb-1"><span className="font-semibold">Tech stack:</span> {project.stack}</p>
                     <div className="flex gap-2">
-                      {project.page?.trim() && <a className="underline text-xs" href={project.page} target="_blank">View</a>}
-                      <a className="underline text-xs" href={project.url} target="_blank">GitHub</a>
+                      <a className="underline text-xs" href={project.github} target="_blank">GitHub</a>
+                      {project.demo?.trim() && <a className="underline text-xs" href={project.demo} target="_blank">Live demo</a>}
                     </div>
                   </div>
                 </div>
@@ -40,7 +40,7 @@ export default function Home() {
           <ul className="flex justify-center md:justify-start flex-wrap gap-6">
             {techSkills.map((skill, index) => (
               <li key={index} className="flex flex-col items-center w-20 py-1">
-                <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1 opacity-80 hover:opacity-100 transition-opacity"/>
+                <img src={skill.image} alt={skill.name} className="h-12 w-12 object-contain mb-1 opacity-80 hover:opacity-100 transition-opacity" />
                 <span className="text-xs font-semibold">{skill.name}</span>
               </li>
             ))}
