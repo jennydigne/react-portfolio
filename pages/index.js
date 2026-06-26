@@ -11,7 +11,7 @@ export default function Home() {
       <header className="bg-gradient-to-br from-slate-600 via-slate-800 to-slate-500 w-full h-[50vh] flex justify-center items-center relative">
         <div className="flex flex-col items-center text-center gap-8">
           <h1 className="font-bold text-4xl md:text-5xl text-slate-100">Jenny Digné</h1>
-          <p className="text-xl w-4/5 md:w-1/2 text-slate-300">Frontend developer student from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
+          <p className="text-xl w-4/5 md:w-1/2 text-slate-300">Frontend developer from Stockholm who enjoys turning ideas into reality through code and creating great user experiences</p>
         </div>
       </header>
       <section className="grid grid-cols-1 xl:grid-cols-3 bg-slate-200 py-4 lg:px-4">
