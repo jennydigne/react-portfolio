@@ -17,9 +17,9 @@ export default function Home() {
       <section className="grid grid-cols-1 xl:grid-cols-3 bg-slate-200 py-4 lg:px-4">
         <div className="p-5 md:p-10 lg:col-span-2">
           <h2 className="text-xl font-semibold mb-8 text-center md:text-left">Some of my projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 auto-rows-fr">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 lg:gap-10 auto-rows-fr">
             {(projects ?? []).map((project, index) => (
-              <div key={index} className="shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 transition-shadow h-full max-h-[500px] max-w-sm rounded-lg overflow-hidden flex flex-col mb-4 bg-white">
+              <div key={index} className="shadow-sm shadow-slate-400 hover:shadow-md hover:shadow-slate-400 transition-shadow h-full max-h-[500px] rounded-lg overflow-hidden flex flex-col mb-4 bg-white">
                 <div className="p-4 flex flex-col h-2/3 justify-between">
                   <h3 className="font-semibold text-md mt-1 mb-2">{project.name}</h3>
                   <p className="text-sm mb-4">{project.description}</p>
